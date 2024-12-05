@@ -1,0 +1,186 @@
+/* General styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #0d1117; /* Dark background */
+  color: #c9d1d9; /* Light text for readability */
+  margin: 0;
+  padding: 0;
+}
+
+/* Header styling */
+header {
+  background: linear-gradient(90deg, #0f2027, #203a43, #2c5364); /* Futuristic gradient */
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+header nav a {
+  color: #58a6ff; /* Neon blue for links */
+  margin-right: 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+header nav a:hover {
+  color: #a5d6ff; /* Lighter blue on hover */
+}
+
+/* Main content container */
+main {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Futuristic Boxed content styling */
+.box {
+  background-color: #161b22; /* Dark background for boxes */
+  padding: 1.5rem;
+  border-radius: 10px;
+  color: #c9d1d9;
+  border: 1px solid rgba(88, 166, 255, 0.4); /* Neon border */
+  box-shadow: 0px 4px 10px rgba(88, 166, 255, 0.3); /* Neon glow */
+}
+
+/* Project grid */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* Individual futuristic project box */
+.project {
+  background-color: #161b22; /* Dark box background */
+  border: 1px solid rgba(88, 166, 255, 0.4);
+  border-radius: 10px;
+  padding: 1.5rem;
+  color: #c9d1d9;
+  box-shadow: 0px 4px 10px rgba(88, 166, 255, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0px 6px 12px rgba(88, 166, 255, 0.5); /* Stronger glow on hover */
+}
+
+.project h2 {
+  color: #58a6ff; /* Neon blue for project titles */
+  margin-top: 0;
+}
+
+.project a {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #58a6ff;
+  color: #0d1117;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0px 4px 6px rgba(88, 166, 255, 0.3); /* Button glow */
+}
+
+.project a:hover {
+  background-color: #a5d6ff;
+  color: #0d1117;
+  transform: translateY(-2px);
+}
+
+/* Main title styling */
+.projects-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #58a6ff;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: 2px solid rgba(88, 166, 255, 0.4);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  text-shadow: 0 0 8px rgba(88, 166, 255, 0.8);
+}
+
+/* Filter section */
+.filter-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #161b22;
+  border: 1px solid rgba(88, 166, 255, 0.4);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px rgba(88, 166, 255, 0.2);
+}
+
+.filter-prompt {
+  font-size: 1.1rem;
+  color: #c9d1d9;
+  font-weight: 500;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+}
+
+.filter-button {
+  padding: 8px 16px;
+  border-radius: 5px;
+  background-color: #58a6ff;
+  color: #0d1117;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0px 4px 6px rgba(88, 166, 255, 0.3); /* Button glow */
+}
+
+.filter-button:hover {
+  background-color: #a5d6ff;
+  transform: translateY(-2px);
+}
+
+/* Footer styling */
+footer {
+  background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+  color: #c9d1d9;
+  text-align: center;
+  padding: 1rem;
+  border-top: 1px solid rgba(88, 166, 255, 0.4);
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.4);
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Blog post styling */
+.blog-post {
+  background-color: #161b22;
+  border: 1px solid rgba(88, 166, 255, 0.4);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0px 4px 10px rgba(88, 166, 255, 0.3);
+}
+
+.blog-post a {
+  color: #58a6ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.blog-post a:hover {
+  color: #a5d6ff;
+}

@@ -1,0 +1,55 @@
+---
+layout: "layout.njk"   # Specifies the layout template for this page
+title: "Projects by Tag"  # Page title for display and SEO
+pagination:
+  data: tags           # Use the 'tags' data to create pages for each tag
+  size: 1              # Generate one page per tag
+  alias: tag           # Use 'tag' as the variable name for each tag on this page
+permalink: "/projects/{{ tag | lower }}/"  # Sets the URL structure for each tag page
+---
+
+<!-- Filter bar to allow switching between tags directly, including an "All" option -->
+<div class="filter-section">
+  <span class="filter-prompt">Filter by Language:</span>
+  <div class="tabs">
+    <!-- "All" button to show all projects -->
+    <a href="/projects/" class="filter-button">All</a>
+    
+    <!-- Dynamic buttons for each tag -->
+    {% for tagItem in tags %}
+      <a href="/projects/{{ tagItem | lower }}/" class="filter-button">{{ tagItem }}</a>
+    {% endfor %}
+  </div>
+</div>
+
+<!-- Page heading displaying the current tag -->
+<h1>{{ tag }} Projects</h1>
+
+<!-- Grid layout to display projects for the current tag -->
+<div class="project-grid">
+  {% for project in collections.allProjects %}  <!-- Loop through all projects -->
+    {% if project.tech_stack.includes(tag) %}   <!-- Only display projects with the current tag -->
+      <div class="project">
+        <h2><a href="{{ project.repo_link }}">{{ project.title }}</a></h2> <!-- Project title and link -->
+        <p>{{ project.description }}</p> <!-- Project description -->
+
+        {% if project.tech_stack %}  <!-- Display technologies used, if available -->
+          <h3>Technologies Used:</h3>
+          <ul>
+            {% for tech in project.tech_stack %}
+              {% if tech != "Projects" %} <!-- Exclude "Projects" tag if present -->
+                <li>{{ tech }}</li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        {% endif %}
+
+        <div>{{ project.overview | safe }}</div> <!-- Full HTML content for project overview -->
+
+        {% if project.feature_image %}  <!-- Display feature image if available -->
+          <img src="{{ project.feature_image }}" alt="{{ project.title }} image">
+        {% endif %}
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>

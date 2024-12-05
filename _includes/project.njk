@@ -1,0 +1,18 @@
+---
+layout: "layout.njk"
+---
+
+<main class="box">
+  <h1>{{ title }}</h1>
+  <p>{{ description }}</p>
+
+  <h2>Technologies Used:</h2>
+  <ul>
+    {% for tech in tech_stack %}
+      <li>{{ tech }}</li>
+    {% endfor %}
+  </ul>
+
+  <a href="{{ repo_link }}" class="box">View on GitHub</a>
+</main>
+
